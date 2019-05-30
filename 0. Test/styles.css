@@ -1,0 +1,398 @@
+@font-face {
+    font-family: "Open sans";
+    src: url("fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Acme";
+    src: url("fonts/Acme-Regular.ttf");
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 1440px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  height: 100vh;
+  background: url('images/header-bg.png') no-repeat;
+  background-size: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  display:block;
+  list-style: none;
+  width: 133px;
+  height: 100px;
+}
+.header_menu li:hover {
+  transform: scale(1.2);
+}
+
+.header_menu {
+  margin-left: 80px;
+  margin-right: 80px;
+  height: 100px;
+  display: block;
+}
+.header_menu_left {
+  float: left;
+}
+
+.header_menu_right {
+  float: right;
+  display: inline-block;
+}
+
+.header_menu a {
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  line-height: 100px;
+}
+
+.header_menu p {
+  margin: 25px 30px;
+  display: inline-block;
+}
+
+.header_info {
+  position: relative;
+  top: 30%;
+}
+.header_info-restaurant, .header_info-name {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.header_info-restaurant a, .header_info-name a{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header_info-restaurant a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.5em;
+}
+.header_info-name {
+  font-family: 'Acme', sans-serif;
+  font-size: 96px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  background: linear-gradient(#E8C300,#E8C300) bottom/ 5% 5px no-repeat;
+}
+
+.header_navi {
+  text-align: center;
+  position: relative;
+  top: 35%;
+}
+.header_navi button,
+.main_booking button,
+.main_contact_content button {
+  padding: 0;
+  margin: 0 20px 0 20px;
+  display: inline-block;
+  background-color: #E8C300;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  height: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+
+}
+
+.header_navi button:hover,
+.main_booking button:hover,
+.main_contact_content button:hover {
+  transform: scale(1.1);
+}
+
+.header_navi a {
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.main_about {
+  display: flex;
+
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 80px 0 80px ;
+}
+.main_about .headline {
+  display: inline-block;
+  font-family: 'Acme', sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0 ;
+  background: linear-gradient(#E8C300,#E8C300) bottom/ 40% 5px no-repeat;
+}
+.main_about .intro {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+.main_about .title {
+  margin: 20px 0 0 0;
+}
+
+.main_about_left {
+  display: inline-block;
+  margin: 0 80px 0 80px;
+  width: 35vw;
+  text-align: center;
+}
+
+.main_about_right {
+  display: inline-block;
+}
+
+.main_booking {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px 0 80px;
+}
+.main_booking_left {
+  display: inline-block;
+  margin: 0 80px 0 0 ;
+  text-align: center;
+}
+
+.main_booking_right {
+  width: 35vw;
+  display: inline-block;
+  margin: 0;
+  align-items: center;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  align-items: center;
+  text-indent: 20px;
+  color: rgba(51, 51, 51, 0.5);
+  padding: 0;
+}
+
+.main_booking_right form {
+  margin: 15px 0 0 0;
+}
+
+.main_booking .book {
+  display: inline-block;
+  font-family: 'Acme', sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  text-transform: uppercase;
+  align-items: center;
+  margin: 0;
+  display: table;
+  margin: 0 auto;
+  padding: 0 0 10px 0 ;
+  background: linear-gradient(#E8C300,#E8C300) bottom/ 30% 5px no-repeat;
+}
+
+.main_booking input {
+  width: 270px;
+  height: 60px;
+  text-decoration: none;
+  border: none;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0 10px 10px 10px;
+}
+.main_booking .data .left-col{
+  display: inline-block;
+  margin: 0;
+}
+.main_booking .data .right-col {
+  display: inline-block;
+  margin: 0;
+}
+.main_booking button {
+  display: block;
+  width: 564px;
+  margin: 0 0 0 10px;
+}
+.main_info {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(51, 51, 51, 0.5);
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.main_specialties {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('images/specialtys-bg.png') no-repeat;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  position:relative;
+}
+
+.main_specialties_title{
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+.main_specialties .content {
+  height: 675px;
+  padding: 0 80px;
+}
+.main_specialties_left {
+  display: inline-block;
+  float: left;
+  margin: 0 80px 0 0;
+}
+
+.main_specialties_right {
+  display: inline-block;
+  text-align: center;
+}
+
+.main_specialties_right .headline {
+  display: inline-block;
+  font-family: 'Acme', sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0 ;
+  background: linear-gradient(#E8C300,#E8C300) bottom/ 40% 5px no-repeat;
+}
+.main_specialties_right .intro {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+.main_specialties_right .article {
+  font-weight: normal;
+  margin: 20px 0 0 0;
+}
+
+.main_contact {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 675px;
+}
+
+.main_contact_content .headline {
+  display: inline-block;
+  font-family: 'Acme', sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0 ;
+  background: linear-gradient(#E8C300,#E8C300) bottom/ 40% 5px no-repeat;
+}
+.main_contact_content .intro {
+  margin: 25px 0 40px 0;
+  font-weight: bold;
+  padding: 0 500px;
+}
+
+.main_contact_content p{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.main_contact_content .info input, .main_contact_content .message input  {
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  background-color: #E5E5E5;
+}
+.main_contact_content .info input {
+  width: 375px;
+  height: 60px;
+  margin: 0 5px 0 5px;
+}
+.main_contact_content .message input {
+  width: 1155px;
+  height: 120px;
+  margin: 10px 0 0 0;
+}
+.main_contact_content button {
+  margin: 40px auto 0 auto;
+  width: 640px;
+}
+
+.main_copyright {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+}
