@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 15" width="22" height="15">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #3e425a } 
+	</style>
+	<g id="Main Menu">
+		<g id="Menu">
+			<path id="Menu Icon" class="shp0" d="M2 0L20 0C20.55 0 21 0.45 21 1L21 1C21 1.55 20.55 2 20 2L2 2C1.45 2 1 1.55 1 1L1 1C1 0.45 1.45 0 2 0ZM2 6L20 6C20.55 6 21 6.45 21 7L21 7C21 7.55 20.55 8 20 8L2 8C1.45 8 1 7.55 1 7L1 7C1 6.45 1.45 6 2 6ZM2 12L20 12C20.55 12 21 12.45 21 13L21 13C21 13.55 20.55 14 20 14L2 14C1.45 14 1 13.55 1 13L1 13C1 12.45 1.45 12 2 12Z" />
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portland shop</title>
+    <link rel="stylesheet" href="../styles/index.css">
+  </head>
+  <body>
+    <header>
+      <div class="header_main">
+        <div class="header_left">
+          <div class="menu">
+            <!-- Это, наверное, должен быть css-элемент,
+            чтобы в дальнейшем его анимировать(меню)? -->
+            <a href="">
+              <img src="../images/menu_icon.svg" alt="open menu">
+            </a>
+          </div>
+          <div class="logo">
+            <a href="">
+              <img src="../images/logo.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <nav class="header_center">
+            <ul class="menu">
+              <li class="menu-item 1">
+                <a href="#">Home</a></li>
+              <li class="menu-item 2">
+                <a href="#">Devices</a></li>
+              <li class="menu-item 3">
+                <a href="#">Delivery & Payment</a></li>
+              <li class="menu-item 4">
+                <a href="#">Guarantee</a></li>
+              <li class="menu-item 5">
+                <a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="header_right">
+          <div class="shopping-cart">
+            <a href="#">
+              <img src="../images/shopping_cart_icon.svg" alt="Shopping cart">
+              <span>cart</span>
+              <span class="shopping-cart_counter">0</span>
+            </a>
+            <span class="button_sign"><a href="#">Sign in</a></span>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="header_bottom">
+        <nav class="header_bottom_left">
+          <ul class="links">
+            <li class="links-item 1">
+              <a href="#">top sales</a></li>
+            <li class="links-item 2">
+              <a href="#">brand focus</a></li>
+            <li class="links-item 3">
+              <a href="#">hi-tech</a></li>
+            <li class="links-item 4">
+              <a href="#">best-sellers</a></li>
+            <li class="links-item 5">
+              <a href="#">projects</a></li>
+          </ul>
+        </nav>
+        <div class="header_bottom_right">
+          <span class="links-item"><a href="#">support</a></span>
+          <span class="search">
+            <img src="../images/search_icon.svg" alt="search">
+            I'm looking for...
+          </span>
+        </div>
+      </div>
+      <div class="header_banner">
+        <div class="header_banner_left">
+          <h1 class="title">iPhone 6 32Gb Black</h1>
+          <p class="article">At first, for some time, I was not able to answer him one
+            word; but as he had taken me in his arms I held fast by
+            him, or I should have fallen to the ground.</p>
+            <a href="#" class="button"><span>Buy now</span></a>
+        </div>
+        <div class="header_banner_right">
+          <img src="../images/iphone_6.png" alt="IPhone 6">
+        </div>
+      </div>
+    </header>
+    <!-- Здесь начинается main
+        Но у меня не получилось(!) поменять местами тэги main и wrapper так,
+        чтобы ничего не сломалось.
+    -->
+    <div class="wrapper">
+      <div class="main_filters"></div>
+      <aside>
+          <div class="col">
+            <img src="../images/products/2.svg" alt="product">
+            <h1 class="title">Apple TV 32Gb</h1>
+            <h2 class="properties">Black</h2>
+            <h2 class="cost">$49.99</h2>
+          </div>
+      </aside>
+      <main>
+        <div class="row">
+              <div class="col">
+                <a href="#">
+                  <img src="../images/products/2.svg" alt="product">
+                </a>
+
+                <h1 class="title">Apple TV 32Gb</h1>
+                <h2 class="properties">Black</h2>
+                <h2 class="cost">$49.99</h2>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="../images/products/2.svg" alt="product">
+                </a>
+                <h1 class="title">Apple TV 32Gb</h1>
+                <h2 class="properties">Black</h2>
+                <h2 class="cost">$49.99</h2>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="../images/products/2.svg" alt="product">
+                </a>
+                <h1 class="title">Apple TV 32Gb</h1>
+                <h2 class="properties">Black</h2>
+                <h2 class="cost">$49.99</h2>
+              </div>
+        </div>
+        <div class="row">
+              <div class="col">
+                <a href="#">
+                  <img src="../images/products/2.svg" alt="product">
+                </a>
+                <h1 class="title">Apple TV 32Gb</h1>
+                <h2 class="properties">Black</h2>
+                <h2 class="cost">$49.99</h2>
+              </div>
+              <div class="double-col">
+                <span class="cost">$49.99</span>
+                <div class="image">
+                  <a href="#">
+                    <img src="../images/products/5.svg" alt="product">
+                  </a>
+                </div>
+
+                <div class="info">
+                  <h1 class="title">Apple TV 32Gb</h1>
+                  <h2 class="properties">Black</h2>
+                </div>
+              </div>
+        </div>
+      </main>
+    </div>   <!-- end wrapper -->
+    <div class="main_paginator">
+      <ul class="list">
+        <li class="list-item">
+          <a href="#"><</a>
+        </li>
+        <li class="list-item active">
+          <a href="#">1</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="active">2</a>
+        </li>
+        <li class="list-item">
+          <a href="#">3</a>
+        </li>
+        <li class="list-item">
+          <a href="#">4</a>
+        </li>
+        <li class="list-item">
+          <a href="#">5</a>
+        </li>
+        <li class="list-item">
+          <a href="#">></a>
+        </li>
+      </ul>
+    </div>
+    <div class="main_best-sellers">
+      <h1 class="main_best-sellers_title">best sellers</h1>
+      <hr/>
+      <div class="row">
+        <div class="col">
+              <img src="../images/products/13.svg" alt="product">
+              <h1 class="title">Apple TV 32Gb</h1>
+              <h2 class="properties">Black</h2>
+              <h2 class="cost">$49.99</h2>
+        </div>
+        <div class="col">
+
+              <img src="../images/products/13.svg" alt="product">
+              <h1 class="title">Apple TV 32Gb</h1>
+              <h2 class="properties">Black</h2>
+              <h2 class="cost">$49.99</h2>
+        </div>
+        <div class="col">
+              <img src="../images/products/13.svg" alt="product">
+              <h1 class="title">Apple TV 32Gb</h1>
+              <h2 class="properties">Black</h2>
+              <h2 class="cost">$49.99</h2>
+        </div>
+        <div class="col">
+              <img src="../images/products/13.svg" alt="product">
+              <h1 class="title">Apple TV 32Gb</h1>
+              <h2 class="properties">Black</h2>
+              <h2 class="cost">$49.99</h2>
+        </div>
+      </div>
+    </div>
+    <div class="main_feedback">
+      <h1 class="title-one">What Our Customers Have to Say</h1>
+      <h2 class="title-two">Couple of Words About This Stories Section</h2>
+      <div class="main_feedback_customers">
+        <div class="row">
+
+          <div class="col">
+            <div class="customer">
+              <img class="customer-image" src="../images/user_1.svg" alt="user">
+              <div class="customer-info">
+                <h2 class="name">Celia Fields</h2>
+                <h3 class="position">UX Expert</h3>
+              </div>
+            </div>
+              <p class="article">This I have produced as a scantling
+                of Jack’s great eloquence and the force
+                of his reasoning upon such abstruse matters.
+              </p>
+          </div>
+          <div class="col">
+            <div class="customer">
+              <img class="customer-image" src="../images/user_1.svg" alt="user">
+              <div class="customer-info">
+                <h2 class="name">Celia Fields</h2>
+                <h3 class="position">UX Expert</h3>
+              </div>
+            </div>
+              <p class="article">This I have produced as a scantling
+                of Jack’s great eloquence and the force
+                of his reasoning upon such abstruse matters.
+              </p>
+          </div>
+          <div class="col">
+            <div class="customer">
+              <img class="customer-image" src="../images/user_1.svg" alt="user">
+              <div class="customer-info">
+                <h2 class="name">Celia Fields</h2>
+                <h3 class="position">UX Expert</h3>
+              </div>
+            </div>
+              <p class="article">This I have produced as a scantling
+                of Jack’s great eloquence and the force
+                of his reasoning upon such abstruse matters.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-top_left">
+          <div class="logo">
+            <a href="">
+              <img src="../images/logo_white.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <nav class="footer-top_center">
+          <ul class="menu">
+            <li class="menu-item 1">
+              <a href="#">Home</a></li>
+            <li class="menu-item 2">
+              <a href="#">shop</a></li>
+            <li class="menu-item 3">
+              <a href="#">team</a></li>
+            <li class="menu-item 4">
+              <a href="#">About Us</a></li>
+            <li class="menu-item 5">
+              <a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="footer-top_right">
+          <div class="socials">
+            <img src="../images/twitter_icon.svg" alt="twitter">
+            <img src="../images/facebook_icon.svg" alt="facebook">
+            <img src="../images/g+_icon.svg" alt="google+">
+          </div>
+        </div>
+
+      </div>
+      <hr/>
+      <div class="footer-bottom">
+        <div class="footer-bottom_left">
+          <h2 class="article">She gave my mother such a turn, that I have always been convinced
+            I am indebted to Miss Betsey for having been born on a Friday.
+          </h2>
+        </div>
+        <div class="footer-bottom_right">
+          <ul class="links">
+            <li class="links-item 1">
+              <a href="#">Privacy Policy</a></li>
+            <li class="links-item 2">
+              <a href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
