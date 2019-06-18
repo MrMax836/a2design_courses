@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <section class="header-top">
+        <div class="header-top_left">
+          <div class="mobile_menu">
+            <img class="menu_icon" src="../images/menu_icon.svg" alt="">
+          </div>
+          <img class="logo" src="../images/logo.svg" alt="">
+          <form class="search" action="index.html" method="get">
+            <input type="text" class="search_box" placeholder="Search New York">
+            <img src="../images/search_icon.svg" class="icon" alt="">
+            <button type="button" class="search_button"></button>
+            <select class="search_select">
+              <option value="New York">New York</option>
+              <option value="Washington">Washington</option>
+            </select>
+          </form>
+        </div>
+        <div class="header-top_right">
+            <ul class="links">
+              <li class="link-item">
+                <img class="link-icon" src="../images/help_icon.svg" alt="">
+                <span>Help</span>
+              </li>
+              <li class="link-item">
+                <img class="link-icon" src="../images/favorites_icon.svg" alt="">
+                <span>Favorites</span>
+              </li>
+              <li class="link-item">
+                <img class="link-icon" src="../images/cart_icon.svg" alt="">
+                <span>Cart</span>
+              </li>
+            </ul>
+            <div class="sign">
+              <img class="link-icon" src="../images/sign_icon.svg" alt="">
+              <button type="button" class="sign_button">Log in</button>
+              <vertical-line></vertical-line>
+              <button type="button" class="sign_button">Register</button>
+            </div>
+        </div>
+      </section>
+      <section class="header-bottom">
+        <nav class="header_menu">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#">tours</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">attractions</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">museums</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">discount passes</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">neighborhoods</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <div class="">
+        Category > Museums
+      </div>
+    </header>
+    <section>
+      <div class="block-slider">
+        <h1 class="block-slider__title">
+          New York City Museums
+        </h1>
+        <div class="block-slider__slider-content">
+            <img class="slider__image" src="../images/museums/slider-1.jpg" alt="">
+            <img class="slider__image" src="../images/museums/slider-2.jpg" alt="">
+        </div>
+        <button type="button" class="block-slider__button button_left"></button>
+        <button type="button" class="block-slider__button button_right"></button>
+      </div>
+    </section>
+
+    <div class="filters">
+      <span>Museums</span>
+      <select class="filters__select">
+        <option class="filters__select__item" value="subcategories">Subcategories</option>
+      </select>
+      <select class="filters__select">
+        <option class="filters__select__item" value="neighborhoods">Neighborhoods</option>
+      </select>
+      <select class="filters__select">
+        <option class="filters__select__item" value="duration">Duration</option>
+      </select>
+      <select class="filters__select">
+        <option class="filters__select__item" value="sort">Sort</option>
+      </select>
+      <span class="filters__result-counter">38 results</span>
+    </div>
+
+    <main>
+      <div class="main__content">
+        <div class="main__content_left">
+          <div class="main__filters">
+            <select class="filters__select">
+              <option class="filters__select__item" value="sort">Sort</option>
+            </select>
+            <span class="filters__result-counter">38 results</span>
+          </div>
+          <div class="row">
+            <article class="colomn mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-1.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                NYC Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-1.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                NYC Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-1.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                NYC Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+
+
+          </div>
+
+        </div>
+        <div class="main__content_right">
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
