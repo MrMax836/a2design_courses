@@ -172,14 +172,33 @@ vertical-line {
 .search_select {
   background-color: #0084BA;
 }
+.filters__select {
+  min-height: 55px;
+  padding-left: 7px;
+  padding-right: 19px;
+  width: inherit;
+  background: url(../images/select-arrow.svg) no-repeat right;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  /* background-position-x: 50px; */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
 
+}
 main {
   font-family: 'Actor', sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 .main__content {
-  padding: 0 30px;
+  padding: 0 28px 166px 28px;
 }
 .main__content_left,
 .main__content_right {
@@ -213,7 +232,7 @@ main {
 }
 
 .colomn__image {
-  width: 210px;
+  width: 211px;
   height: 140px;
   overflow: hidden;
   position: relative;
@@ -231,7 +250,7 @@ main {
 .colomn__title {
   margin: 0;
   font-weight: bold;
-  font-size: 18px;  /* Hack - изменил высоту с 19 на 18*/
+  font-size: 19px;  /* Hack - изменил высоту с 19 на 18*/
   line-height: 22px;
   color: #1C2E36;
   box-sizing: border-box;
