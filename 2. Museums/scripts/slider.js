@@ -11,6 +11,7 @@ function slideImageLeft() {
   images[tmp].classList.toggle("active");
   images[current_active].classList.toggle("active");
 }
+
 function slideImageRight() {
   var images = document.getElementsByClassName('slider__image');
   var images_count = images.length;
@@ -21,4 +22,12 @@ function slideImageRight() {
   }
   images[tmp].classList.toggle("active");
   images[current_active].classList.toggle("active");
+}
+
+// ####################################################
+function openMap() {
+  var header = getElementsByTagName('header');
+  header.style.display = "none";
+  var main_left = getElementsByClassName('main__content_left');
+  main_left.style.display = "none";
 }

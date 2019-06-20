@@ -574,6 +574,9 @@ transform: scale(-1, 1);
   .main__content_right {
     display: none;
   }
+  .main__content_left {
+    width: 100%;
+  }
   .colomn.mw-2 {
     max-width: 50%;
     box-sizing: border-box;
@@ -586,7 +589,7 @@ transform: scale(-1, 1);
     padding-right: 0;
   }
   .colomn:not(:nth-child(2n+2)) { /* WARNING - сброс */
-    /* padding-right: 20px; */
+    padding-right: 20px;
   }
   .colomn__title {
     font-size: 14px;
