@@ -5,6 +5,7 @@
     <title>Sity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scripts/slider.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
   </head>
@@ -20,7 +21,7 @@
             <input type="text" class="search_box" placeholder="Search New York">
             <img src="../images/search_icon.svg" class="icon" alt="">
             <button type="button" class="search_button"></button>
-            <select class="search_select">
+            <select class="selector search_select">
               <option value="New York">New York</option>
               <option value="Washington">Washington</option>
             </select>
@@ -70,52 +71,75 @@
           </ul>
         </nav>
       </section>
-      <div class="">
-        Category > Museums
-      </div>
     </header>
-    <section>
-      <div class="block-slider">
-        <h1 class="block-slider__title">
-          New York City Museums
-        </h1>
+    <div class="nav-history">
+      <ul class="history">
+        <li class="history-item">
+            Category
+        </li>
+        <li class="history-item">
+            Museums
+        </li>
+      </ul>
+    </div>
+    <section class="block-slider">
+        <!-- Это должен быть span? -->
+          <h1 class="block-slider__title">
+              New York City Museums
+            </h1>
         <div class="block-slider__slider-content">
-            <img class="slider__image" src="../images/museums/slider-1.jpg" alt="">
+            <img class="slider__image active" src="../images/museums/slider-1.jpg" alt="">
             <img class="slider__image" src="../images/museums/slider-2.jpg" alt="">
         </div>
-        <button type="button" class="block-slider__button button_left"></button>
-        <button type="button" class="block-slider__button button_right"></button>
-      </div>
+        <button type="button" class="block-slider__button button_left" onclick="slideImageLeft()">
+          <img src="../images/arrow-right.svg" alt="">
+        </button>
+        <button type="button" class="block-slider__button button_right" onclick="slideImageRight()">
+          <img src="../images/arrow-right.svg" alt="">
+        </button>
     </section>
 
-    <div class="filters">
-      <span>Museums</span>
-      <select class="filters__select">
-        <option class="filters__select__item" value="subcategories">Subcategories</option>
-      </select>
-      <select class="filters__select">
-        <option class="filters__select__item" value="neighborhoods">Neighborhoods</option>
-      </select>
-      <select class="filters__select">
-        <option class="filters__select__item" value="duration">Duration</option>
-      </select>
-      <select class="filters__select">
-        <option class="filters__select__item" value="sort">Sort</option>
-      </select>
-      <span class="filters__result-counter">38 results</span>
-    </div>
+    <section class="filters sticky">
+      <div class="filters__left">
+          <span class="filters__title">Museums</span>
+          <select class="selector filters__select">
+              <option class="filters__select__item" value="subcategories">Subcategories</option>
+            </select>
+            <select class="selector filters__select">
+              <option class="filters__select__item" value="neighborhoods">Neighborhoods</option>
+            </select>
+            <select class="selector filters__select">
+              <option class="filters__select__item" value="duration">Duration</option>
+            </select>
+      </div>
+      <div class="filters__right">
+          <select class="selector filters__select selector_sort">
+              <option class="filters__select__item" value="sort">Sort</option>
+            </select>
+            <span class="filters__result-counter">38 results</span>
+      </div>
+      <div class="filters_mobile">
+        <button class="filters_mobile__button map">
+          Map
+        </button>
+        <button class="filters_mobile__button filters">
+          Filter <img class="arrow" src="../images/arrow_gray.svg" alt="">
+        </button>
+
+      </div>
+    </section>
 
     <main>
       <div class="main__content">
         <div class="main__content_left">
           <div class="main__filters">
-            <select class="filters__select">
+            <span class="filters__result-counter">38 results</span>
+            <select class="selector filters__select selector_sort">
               <option class="filters__select__item" value="sort">Sort</option>
             </select>
-            <span class="filters__result-counter">38 results</span>
           </div>
           <div class="row">
-            <article class="colomn mw-3">
+            <article class="colomn mw-2 mw-3">
               <div class="colomn__image">
                 <img src="../images/museum-1.svg" alt="">
                 <button type="button" class="colomn__button__favorites">
@@ -130,9 +154,147 @@
                 from $26 per person
               </h2>
             </article>
-            <article class="colomn mw-3">
+            <article class="colomn mw-2 mw-3">
               <div class="colomn__image">
-                <img src="../images/museum-1.svg" alt="">
+                <img src="../images/museum-2.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                The Bronx Museum of the Arts Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-3.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                Brooklyn Museum of the Arts Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+
+            <article class="colomn mw-2 mw-3">
+                <div class="colomn__image">
+                  <img src="../images/museum-4.svg" alt="">
+                  <button type="button" class="colomn__button__favorites">
+                    <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                  </button>
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </div>
+                <h1 class="colomn__title">
+                  American Folk Art Museum Tour with Skip-the-Line Access
+                </h1>
+                <h2 class="colomn__info">
+                  from $26 per person
+                </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-5.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                The Frick Collection Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-6.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                Guggenheim Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+
+            <article class="colomn mw-2 mw-3">
+                <div class="colomn__image">
+                  <img src="../images/museum-7.svg" alt="">
+                  <button type="button" class="colomn__button__favorites">
+                    <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                  </button>
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </div>
+                <h1 class="colomn__title">
+                  Hall of Science Tour with Skip-the-Line Access
+                </h1>
+                <h2 class="colomn__info">
+                  from $26 per person
+                </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-8.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                The Intrepid Museum Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-9.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                Metropolitan Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+
+            <article class="colomn mw-2 mw-3">
+                <div class="colomn__image">
+                  <img src="../images/museum-10.svg" alt="">
+                  <button type="button" class="colomn__button__favorites">
+                    <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                  </button>
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </div>
+                <h1 class="colomn__title">
+                  NYC Museum of Art Tour with Skip-the-Line Access
+                </h1>
+                <h2 class="colomn__info">
+                  from $26 per person
+                </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-11.svg" alt="">
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
@@ -145,9 +307,55 @@
                 from $26 per person
               </h2>
             </article>
-            <article class="colomn mw-3">
+            <article class="colomn mw-2 mw-3">
               <div class="colomn__image">
-                <img src="../images/museum-1.svg" alt="">
+                <img src="../images/museum-12.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                NYC Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+
+            <article class="colomn mw-2 mw-3">
+                <div class="colomn__image">
+                  <img src="../images/museum-13.svg" alt="">
+                  <button type="button" class="colomn__button__favorites">
+                    <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                  </button>
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </div>
+                <h1 class="colomn__title">
+                  NYC Museum of Art Tour with Skip-the-Line Access
+                </h1>
+                <h2 class="colomn__info">
+                  from $26 per person
+                </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-14.svg" alt="">
+                <button type="button" class="colomn__button__favorites">
+                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                </button>
+                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+              </div>
+              <h1 class="colomn__title">
+                NYC Museum of Art Tour with Skip-the-Line Access
+              </h1>
+              <h2 class="colomn__info">
+                from $26 per person
+              </h2>
+            </article>
+            <article class="colomn mw-2 mw-3">
+              <div class="colomn__image">
+                <img src="../images/museum-15.svg" alt="">
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
@@ -165,7 +373,8 @@
           </div>
 
         </div>
-        <div class="main__content_right">
+        <div class="main__content_right sticky">
+          <img class="map" src="../images/map.png" alt="">
 
         </div>
       </div>
