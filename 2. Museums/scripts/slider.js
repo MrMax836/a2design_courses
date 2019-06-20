@@ -26,8 +26,22 @@ function slideImageRight() {
 
 // ####################################################
 function openMap() {
-  var header = getElementsByTagName('header');
-  header.style.display = "none";
-  var main_left = getElementsByClassName('main__content_left');
-  main_left.style.display = "none";
+  var header = document.getElementsByClassName('header');
+  header[0].style.display = 'none';
+  var main_left = document.getElementsByClassName('main__content_left');
+  main_left[0].style.display = 'none';
+  var nav = document.getElementsByClassName('nav-history');
+  nav[0].style.display = 'none';
+  var slider = document.getElementsByClassName('block-slider');
+  slider[0].style.display = 'none';
+  var filters__title = document.getElementsByClassName('filters__title');
+  filters__title[0].style.display = 'none';
+
+  var filters__mobile = document.getElementsByClassName('filters_mobile');
+  filters__mobile[0].style["paddingBottom"] =  0;
+  
+  var map = document.getElementsByClassName('main__content_right');
+  map[0].style.display = 'block';
+  var main__content = document.getElementsByClassName('main__content');
+  main__content[0].style.padding = '0';
 }
