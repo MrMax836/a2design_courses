@@ -44,37 +44,38 @@
             </ul>
             <div class="sign">
               <img class="link-icon" src="../images/sign_icon.svg" alt="">
-              <button type="button" class="sign_button">Log in</button>
-              <vertical-line></vertical-line>
-              <button type="button" class="sign_button">Register</button>
+              <button type="button" class="sign_button log-in">Log in</button>
+              <button type="button" class="sign_button register">Register</button>
             </div>
         </div>
       </section>
       <section class="header-bottom">
-        <nav class="header_menu">
-          <ul class="menu">
-            <li class="menu-item">
-              <a href="#">tours</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">attractions</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">museums</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">discount passes</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">neighborhoods</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="wrapper">
+            <nav class="header_menu">
+                <ul class="menu">
+                  <li class="menu-item">
+                    <a href="#">tours</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">attractions</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">museums</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">discount passes</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">neighborhoods</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
       </section>
     </header>
     <div class="nav-history">
       <ul class="history">
-        <!-- Это должны быть ссылки -->
+        <!-- Это должны быть ссылки? Или кнопки? -->
         <li class="history-item">
             Category
         </li>
@@ -91,13 +92,13 @@
         <div class="block-slider__slider-content">
             <img class="slider__image active" src="../images/museums/slider-1.jpg" alt="">
             <img class="slider__image" src="../images/museums/slider-2.jpg" alt="">
-        </div>
-        <button type="button" class="block-slider__button button_left" onclick="slideImageLeft()">
-          <img src="../images/arrow-right.svg" alt="">
-        </button>
-        <button type="button" class="block-slider__button button_right" onclick="slideImageRight()">
-          <img src="../images/arrow-right.svg" alt="">
-        </button>
+            <button type="button" class="block-slider__button button_left" onclick="slideImageLeft()">
+              <img src="../images/arrow-right.svg" alt="">
+            </button>
+            <button type="button" class="block-slider__button button_right" onclick="slideImageRight()">
+              <img src="../images/arrow-right.svg" alt="">
+            </button>
+          </div>
     </section>
 
     <section class="filters sticky">
@@ -123,14 +124,104 @@
         <button class="filters_mobile__button map" onclick="openMap()">
           Map
         </button>
-        <button class="filters_mobile__button filters">
+        <button class="filters_mobile__button list" onclick="closeMap()">
+          List
+        </button>
+        <button class="filters_mobile__button filters" onclick="openFilters()">
           Filter <img class="arrow" src="../images/arrow_gray.svg" alt="">
         </button>
-
+        <div class="filters_mobile__menu">
+          <button class="filters_mobile__menu__button close" onclick="closeFilters()">
+            Filter
+            <img class="exit" src="../images/exit.svg" alt="">
+          </button>
+          <fieldset class="menu__block">
+            <label class="menu__block title">
+              Subcategories
+              <img class="menu__block title__minus" src="../images/minus.svg" alt="">
+            </label>
+            <ul class="menu__block__items">
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Art Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  History Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Outdoor Museums
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="menu__block">
+            <label class="menu__block title">
+              Subcategories
+              <img class="menu__block title__minus" src="../images/minus.svg" alt="">
+            </label>
+            <ul class="menu__block__items">
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Art Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  History Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Outdoor Museums
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="menu__block">
+            <label class="menu__block title">
+              Subcategories
+              <img class="menu__block title__minus" src="../images/minus.svg" alt="">
+            </label>
+            <ul class="menu__block__items">
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Art Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  History Museums
+                </label>
+              </li>
+              <li class="item">
+                <label>
+                  <input type="checkbox" class="item__input">
+                  Outdoor Museums
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="control-panel">
+              <button class="filters_mobile__menu__button control">reset</button>
+              <button class="filters_mobile__menu__button control">go</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <main>
+    <main class="main">
       <div class="main__content">
         <div class="main__content_left">
           <div class="main__filters">
@@ -146,7 +237,7 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+                
               </div>
               <h1 class="colomn__title">
                 NYC Museum of Art Tour with Skip-the-Line Access
@@ -161,7 +252,7 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
+               
               </div>
               <h1 class="colomn__title">
                 The Bronx Museum of the Arts Tour with Skip-the-Line Access
@@ -176,7 +267,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 Brooklyn Museum of the Arts Tour with Skip-the-Line Access
@@ -192,7 +282,6 @@
                   <button type="button" class="colomn__button__favorites">
                     <img class="favorites" src="../images/favorites_icon.svg" alt="">
                   </button>
-                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </div>
                 <h1 class="colomn__title">
                   American Folk Art Museum Tour with Skip-the-Line Access
@@ -207,7 +296,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 The Frick Collection Tour with Skip-the-Line Access
@@ -222,7 +310,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 Guggenheim Tour with Skip-the-Line Access
@@ -238,7 +325,6 @@
                   <button type="button" class="colomn__button__favorites">
                     <img class="favorites" src="../images/favorites_icon.svg" alt="">
                   </button>
-                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </div>
                 <h1 class="colomn__title">
                   Hall of Science Tour with Skip-the-Line Access
@@ -253,7 +339,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 The Intrepid Museum Tour with Skip-the-Line Access
@@ -268,7 +353,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 Metropolitan Museum of Art Tour with Skip-the-Line Access
@@ -284,7 +368,6 @@
                   <button type="button" class="colomn__button__favorites">
                     <img class="favorites" src="../images/favorites_icon.svg" alt="">
                   </button>
-                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </div>
                 <h1 class="colomn__title">
                   NYC Museum of Art Tour with Skip-the-Line Access
@@ -299,7 +382,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 NYC Museum of Art Tour with Skip-the-Line Access
@@ -314,7 +396,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 NYC Museum of Art Tour with Skip-the-Line Access
@@ -330,7 +411,6 @@
                   <button type="button" class="colomn__button__favorites">
                     <img class="favorites" src="../images/favorites_icon.svg" alt="">
                   </button>
-                  <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </div>
                 <h1 class="colomn__title">
                   NYC Museum of Art Tour with Skip-the-Line Access
@@ -345,7 +425,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 NYC Museum of Art Tour with Skip-the-Line Access
@@ -360,7 +439,6 @@
                 <button type="button" class="colomn__button__favorites">
                   <img class="favorites" src="../images/favorites_icon.svg" alt="">
                 </button>
-                <img class="favorites" src="../images/favorites_icon.svg" alt="">
               </div>
               <h1 class="colomn__title">
                 NYC Museum of Art Tour with Skip-the-Line Access
@@ -376,7 +454,11 @@
         </div>
         <div class="main__content_right sticky">
           <img class="map" src="../images/map.png" alt="">
-
+        </div>
+        <!-- Скопировал содержимое. Как сделать правильно?
+        Типа в будущем это можно будет сделать модулем, который сюда подключается? -->
+        <div class="main__content_mobile">
+          <img class="map" src="../images/map.png" alt="">
         </div>
       </div>
     </main>

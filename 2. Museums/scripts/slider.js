@@ -24,24 +24,58 @@ function slideImageRight() {
   images[current_active].classList.toggle("active");
 }
 
-// ####################################################
-function openMap() {
-  var header = document.getElementsByClassName('header');
-  header[0].style.display = 'none';
-  var main_left = document.getElementsByClassName('main__content_left');
-  main_left[0].style.display = 'none';
-  var nav = document.getElementsByClassName('nav-history');
-  nav[0].style.display = 'none';
-  var slider = document.getElementsByClassName('block-slider');
-  slider[0].style.display = 'none';
-  var filters__title = document.getElementsByClassName('filters__title');
-  filters__title[0].style.display = 'none';
+var displayStock = [];
+var listForHide = [];
 
-  var filters__mobile = document.getElementsByClassName('filters_mobile');
-  filters__mobile[0].style["paddingBottom"] =  0;
+function divHide(thisClass) {
+  var elem = document.getElementsByClassName(thisClass)[0];
+  displayStock.push(elem.style.display);
+  elem.style.display = 'none';
+}
+function divVisible(thisClass) {
+  var elem = document.getElementsByClassName(thisClass)[0];
+  elem.style.display = displayStock.shift();
+}
+
+
+
+function openMap() {
   
-  var map = document.getElementsByClassName('main__content_right');
-  map[0].style.display = 'block';
-  var main__content = document.getElementsByClassName('main__content');
-  main__content[0].style.padding = '0';
+  listForHide.push('header');
+  listForHide.push('main__content_left');
+  listForHide.push('main__content_right');
+  listForHide.push('nav-history');
+  listForHide.push('block-slider');
+  listForHide.push('filters__title');
+  listForHide.push('filters_mobile__button map');
+
+  for (var i = 0; i < listForHide.length; i++) {
+    divHide(listForHide[i]);
+  }
+
+  document.getElementsByClassName('filters_mobile__button list')[0].style.display = 'flex';
+  document.getElementsByClassName('main__content_mobile')[0].style.display = 'block';
+  document.getElementsByClassName('main__content')[0].classList.add("remove-padding");
+}
+
+function closeMap() {
+  for (var i = 0; i < listForHide.length; i++) {
+    divVisible(listForHide[i]);
+  }
+  divHide('main__content_mobile');
+  document.getElementsByClassName('filters_mobile__button list')[0].style.display = 'none';
+  document.getElementsByClassName('main__content')[0].classList.remove("remove-padding");
+  document.getElementsByClassName('filters_mobile__button list')[0].style.display = 'none';
+  document.getElementsByClassName('filters_mobile__button map')[0].style.display = 'flex';
+  // очистка массивов
+  displayStock.length = 0;
+  listForHide.length = 0;
+}
+
+
+function openFilters() {
+  document.getElementsByClassName('filters_mobile__menu')[0].style.display = 'flex';
+}
+function closeFilters() {
+  document.getElementsByClassName('filters_mobile__menu')[0].style.display = 'none';
 }
