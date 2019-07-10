@@ -12,6 +12,7 @@ var path = {
     src: {
         html: 'src/templates/*.html',
         style: 'src/stylus/main.styl',
+        css: 'src/stylus/**/*.css',
         js: 'src/js/*.js',
         img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -19,6 +20,7 @@ var path = {
     watch: {
         html: 'src/templates/**/*.html',
         style: 'src/stylus/**/*.styl',
+        css: 'src/stylus/**/*.css',
         js: 'src/js/**/*.js',
         img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -29,6 +31,11 @@ var path = {
 gulp.task('stylus:build', function() {
     return gulp.src(path.src.style)
         .pipe( stylus({'include css': true}) )
+        .pigulppe (gulp.dest(path.build.css) );
+});
+
+gulp.task('css:build', function() {
+    return gulp.src(path.src.css)
         .pipe (gulp.dest(path.build.css) );
 });
 
@@ -57,6 +64,9 @@ gulp.task('watch:html', function () {
 gulp.task('watch:stylus', function () {
     return gulp.watch(path.watch.style, gulp.series('stylus:build'));
 });
+gulp.task('watch:css', function () {
+    return gulp.watch(path.watch.css, gulp.series('css:build'));
+});
 gulp.task('watch:img', function () {
     return gulp.watch(path.watch.img, gulp.series('img:build'));
 });
@@ -68,5 +78,5 @@ gulp.task('watch:js', function () {
 });
 
 gulp.task('watch-all',
-    gulp.parallel('watch:html', 'watch:stylus', 'watch:img', 'watch:fonts', 'watch:js')
+    gulp.parallel('watch:html', 'watch:stylus', 'watch:css', 'watch:img', 'watch:fonts', 'watch:js')
 );
