@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<input
+   			id='input'
+    			type='text'
+    			placeholder='Input some value'
+  		/>
+
+<script>
+var inputElement = document.getElementById('input');
+    	inputElement.addEventListener('input', autosave);
+
+        var globalInputTimeOut = null;
+        function autosave() {
+            clearTimeout(globalInputTimeOut);
+            globalInputTimeOut = setTimeout(function() {
+                console.log(inputElement.value);
+            }
+            , 1500);
+        };
+		</script>
+	</body>
+</html>
