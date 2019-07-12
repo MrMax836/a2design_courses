@@ -88,8 +88,8 @@ var objNest2 = {
 };
 
 
-console.log("Tests:");
-console.log("Part one:");
+// console.log("Tests:");
+// console.log("Part one:");
 
 console.log("====================================");
 console.log("");
@@ -136,9 +136,13 @@ function isObjectsEqual(obj1, obj2) {
     for (var prop in obj1) {
         
         if ( isObject(obj1[prop]) && isObject(obj2[prop])) {
-            isObjectsEqual(obj1[prop], obj2[prop]);
-            
-        } else if (obj1[prop] !== obj2[prop]) {
+			var res = isObjectsEqual(obj1[prop], obj2[prop]);
+			// ну я так думал, про сто вложенные if...
+			if (res === false) {
+				return false;
+			};
+		}
+		else if (obj1[prop] !== obj2[prop]) {
             return false;
         };
     };
