@@ -66,7 +66,7 @@ var forAverageByClass = {
 var arrSize = arr.length;
 
 // вывести среднюю оценку всех учащихся
-function averageMark(arr, forAverage) {
+function getAverageMark(arr, forAverage) {
 	arr.forEach(function(item) {
 		forAverage.summ += item.mark;
 		forAverage.count++;
@@ -75,7 +75,7 @@ function averageMark(arr, forAverage) {
 };
 
 // Средние оценки учащихся, сгруппированных по классу
-function averageMarkByClass(arr) {
+function getAverageMarkByClass(arr) {
 	var classes = [];
 
 	// сгруппировал по классам
@@ -92,20 +92,35 @@ function averageMarkByClass(arr) {
 	classes.forEach(function(item) {
 		var average = Object.create(forAverage);
 
-		averageMark(item, average);
+		getAverageMark(item, average);
 
 		console.log("Average in class " + item[0].class + " = " + average.average());
 	});
 };
 
+function getTopStudents(studArr) {
+	studArr.sort(function(a, b) {
+		return a.mark < b.mark ? 1 : -1;
+	  });
+	var size = studArr.length;
+	var output = "";
+	for (let i = 0; i < size; i++) {
+		output += "Name: " + studArr[i].name + ", mark: " + studArr[i].mark + "\n";
+	};
+	console.log(output);
+};
 console.log("============================");
 console.log("Average mark by all classes:");
 console.log("");
 var counter = Object.create(forAverage);
-var average = averageMark(arr, counter);
+var average = getAverageMark(arr, counter);
 console.log("Average mark: ", average);
 console.log("============================");
 console.log("Average mark by class:");
 console.log("");
-averageMarkByClass(arr);
+getAverageMarkByClass(arr);
+console.log("Top student's: ", average);
+console.log("============================");
+console.log("");
+getTopStudents(arr);
 
